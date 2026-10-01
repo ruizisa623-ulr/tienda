@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle</title>
+    <link rel="stylesheet" href="{% static 'productos/productos.css' %}">
+</head>
+<body>
+    
+    <main class="contenedor detalle">
+    <h1>Detalle del producto</h1>
+
+    <p><strong>Nombre:</strong> {{ producto.nombre }}</p>
+    <p><strong>Categoria:</strong> {{ producto.categoria }}</p>
+    <p><strong>Precio:</strong> {{ producto.precio }}</p>
+    <p><strong>Cantidad:</strong> {{ producto.cantidad }}</p>
+    <p><strong>Estado:</strong> {{ producto.estado|yesno:"Disponible,No disponible" }}</p>
+    <a class="boton" href="/productos/editar/{{ producto.id }}/">Editar</a>
+    <a href="/productos/">Volver</a>
+</main>
+
+</body>
+</html>

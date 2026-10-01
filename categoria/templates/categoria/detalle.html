@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle</title>
+    <link rel="stylesheet" href="{% static 'categoria/categoria.css' %}">
+</head>
+<body>
+    
+    <h1>Detalle de la categoria</h1>
+
+    <p>
+        <strong>Nombre:</strong>
+        {{ categoria.nombre }}
+    </p>
+
+    <p>
+        <strong>Observaciones:</strong>
+        {{ categoria.observaciones }}
+    </p>
+
+
+    <br>
+
+    <a href="/categorias/editar/{{ categoria.id }}/">
+        Editar
+    </a>
+
+    <br><br>
+
+    <a href="/categorias/">
+        Volver
+    </a>
+
+</body>
+</html>

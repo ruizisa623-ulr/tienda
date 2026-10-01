@@ -1,0 +1,55 @@
+/* Estilo general */
+body {
+    text-align: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #e994da;
+    padding: 20px;
+    background-image: url("./images\ \(1\).jpg");
+}
+
+
+/* Contenedor del formulario */
+form {
+    text-align: center;
+    justify-content: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+/* Etiquetas */
+label {
+    display: block;
+    color: white;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc
+}
+
+input{
+    background-color: rgb(255, 184, 244);
+}
+
+button {
+    background-color: rgb(230, 75, 206);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}

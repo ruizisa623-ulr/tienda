@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoria</title>
+    <link rel="stylesheet" href="{% static 'categoria/categoria.css' %}">
+</head>
+<body>
+    
+    <h1>Lista de categorías</h1>
+
+    <a href="/categorias/crear/">
+        Crear nueva categoría
+    </a>
+
+    <hr>
+
+    {% for categoria in categorias %}
+        
+        <h3>{{ categoria.nombre }}</h3>
+        <p>{{ categoria.observaciones }}</p>
+        <a href="/categorias/detalle/{{ categoria.id }}/">
+            Ver
+        </a>
+        
+        |
+
+        <a href="/categorias/editar/{{ categoria.id }}/">
+            Editar
+        </a>
+
+        |
+
+        <a href="/categorias/eliminar/{{ categoria.id }}/">
+            Eliminar
+        </a>
+
+        <hr>
+
+    {% empty %}
+
+        <p>No hay contactos.</p>
+
+    {% endfor %}
+
+</body>
+</html>
